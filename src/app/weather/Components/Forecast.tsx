@@ -17,8 +17,6 @@ function Forecast(props: Props) {
             !item.dt_txt.includes(today) && item.dt_txt.includes("12:00:00"),
     );
 
-    console.log(nextDays);
-
     return (
         <section className=" grid gap-[2vh] grid-cols-1">
             <h2 className=" text-xl font-semibold">Forecast ( 4 Days )</h2>

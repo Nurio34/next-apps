@@ -80,3 +80,129 @@ export const timeStamp_To_FormattedTime = (time: number): string => {
 
     return `${hh}:${mm}`;
 };
+
+export const cityList = [
+    // United States
+    "New York",
+    "Los Angeles",
+    "Chicago",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego",
+    "Dallas",
+    "San Jose",
+
+    // Canada
+    "Toronto",
+    "Vancouver",
+    "Montreal",
+    "Calgary",
+    "Ottawa",
+
+    // United Kingdom
+    "London",
+    "Manchester",
+    "Birmingham",
+    "Liverpool",
+    "Leeds",
+
+    // Germany
+    "Berlin",
+    "Munich",
+    "Frankfurt",
+    "Hamburg",
+    "Cologne",
+
+    // France
+    "Paris",
+    "Marseille",
+    "Lyon",
+    "Toulouse",
+    "Nice",
+
+    // Italy
+    "Rome",
+    "Milan",
+    "Naples",
+    "Turin",
+    "Palermo",
+
+    // Spain
+    "Madrid",
+    "Barcelona",
+    "Valencia",
+    "Seville",
+    "Zaragoza",
+
+    // China
+    "Beijing",
+    "Shanghai",
+    "Shenzhen",
+    "Guangzhou",
+    "Chengdu",
+
+    // India
+    "Mumbai",
+    "Delhi",
+    "Bangalore",
+    "Hyderabad",
+    "Ahmedabad",
+
+    // Japan
+    "Tokyo",
+    "Osaka",
+    "Nagoya",
+    "Yokohama",
+    "Sapporo",
+
+    // Brazil
+    "São Paulo",
+    "Rio de Janeiro",
+    "Brasília",
+    "Salvador",
+    "Fortaleza",
+
+    // Russia
+    "Moscow",
+    "Saint Petersburg",
+    "Novosibirsk",
+    "Yekaterinburg",
+    "Kazan",
+
+    // Australia
+    "Sydney",
+    "Melbourne",
+    "Brisbane",
+    "Perth",
+    "Adelaide",
+
+    // South Korea
+    "Seoul",
+    "Busan",
+    "Incheon",
+    "Daegu",
+    "Daejeon",
+
+    // Mexico
+    "Mexico City",
+    "Guadalajara",
+    "Monterrey",
+    "Puebla",
+    "Tijuana",
+
+    // South Africa
+    "Johannesburg",
+    "Cape Town",
+    "Durban",
+    "Pretoria",
+    "Port Elizabeth",
+
+    // Argentina
+    "Buenos Aires",
+    "Córdoba",
+    "Rosario",
+    "Mendoza",
+    "La Plata",
+];
