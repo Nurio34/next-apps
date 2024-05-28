@@ -8,9 +8,9 @@ type Props = {
 function WeatherIcon(props: Props) {
     const { weather } = props;
 
-    const { icon, description, id, main } = weather;
+    const { icon, description } = weather;
 
-    const url = ` https://openweathermap.org/img/wn/${icon}@2x.png`;
+    const url = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
     return <Image src={url} alt={description} width={48} height={48} />;
 }

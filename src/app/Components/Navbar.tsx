@@ -1,7 +1,12 @@
 import React from "react";
+import ThemeButton from "./ThemeButton";
 
 function Navbar() {
-    return <nav>Navbar</nav>;
+    return (
+        <nav>
+            <ThemeButton />
+        </nav>
+    );
 }
 
 export default Navbar;

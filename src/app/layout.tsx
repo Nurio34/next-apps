@@ -31,7 +31,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" data-theme="bumblebee">
+        <html lang="en" className=" transition-colors" data-theme={"bumblebee"}>
             <QueryClientProvider client={queryClient}>
                 <body className={inter.className}>
                     <Header />

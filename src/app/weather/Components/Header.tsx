@@ -1,12 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import { cityList } from "@/app/utils/functions";
 
-function Header() {
+type Props = {
+    city: string;
+    setCity: Dispatch<SetStateAction<string>>;
+    setUrl: Dispatch<SetStateAction<string>>;
+};
+
+function Header(props: Props) {
+    const { setCity, city, setUrl } = props;
+
     const [value, setValue] = useState<string>("");
     const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
     const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -34,16 +42,25 @@ function Header() {
         }
     };
 
+    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setCity(value.toLocaleLowerCase());
+        setShowSuggestions(false);
+    };
+
     return (
         <header className="flex flex-wrap justify-start items-center gap-y-[1vh] py-[1vh] px-[2vw]  shadow-md shadow-secondary">
             <Logo />
-            <Navbar />
+            <Navbar city={city} setUrl={setUrl} />
             <SearchBar
                 value={value}
                 onChange={onChange}
-                onSubmit={undefined}
+                onSubmit={onSubmit}
                 suggestions={suggestions}
                 showSuggestions={showSuggestions}
+                setCity={setCity}
+                setValue={setValue}
+                setShowSuggestions={setShowSuggestions}
             />
         </header>
     );

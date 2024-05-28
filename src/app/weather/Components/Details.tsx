@@ -99,7 +99,7 @@ function Details(props: Props) {
                 return (
                     <li
                         key={ind}
-                        className="grid gap-[0.5vh] justify-items-center sm:text-lg bg-primary py-[1vh] px-[2vw] rounded-md "
+                        className="grid gap-[0.5vh] justify-items-center sm:text-lg bg-primary text-primary-content py-[1vh] px-[2vw] rounded-md "
                     >
                         <p
                             className=" min-w-max capitalize font-semibold text-sm sm:text-base"

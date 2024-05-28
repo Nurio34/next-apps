@@ -10,16 +10,11 @@ function TodaysForecast(props: Props) {
     const { data } = props;
     const { list } = data;
 
-    const today = list[0].dt_txt.split(" ")[0].split("-")[2];
-    const todaysPartofList = list.filter((item) => item.dt_txt.includes(today));
+    const forecastList = list.filter((_, ind) => ind <= 7);
 
     return (
-        <div
-            className="grow flex justify-between  gap-[4vw] overflow-x-auto border-2 border-secondary rounded-md py-[1vh] px-[2vw]
-            
-        "
-        >
-            {todaysPartofList.map((item) => {
+        <div className="grow flex justify-between  gap-[4vw] overflow-x-auto border-2 border-secondary rounded-md py-[1vh] px-[2vw]">
+            {forecastList.map((item) => {
                 return (
                     <div
                         key={item.dt}

@@ -3,6 +3,7 @@ import { WeatherResponse } from "../types";
 import Today from "./Today";
 import TodayDetails from "./TodayDetails";
 import Forecast from "./Forecast";
+import Skeleton from "./Skeleton";
 
 type Props = {
     isPending: boolean;
@@ -13,21 +14,7 @@ type Props = {
 function Main(props: Props) {
     const { isPending, error, data } = props;
 
-    if (isPending)
-        return (
-            <main className=" min-h-screen grid place-content-center">
-                <BallTriangle
-                    height={100}
-                    width={100}
-                    radius={5}
-                    color="#4fa94d"
-                    ariaLabel="ball-triangle-loading"
-                    wrapperStyle={{}}
-                    wrapperClass=""
-                    visible={true}
-                />
-            </main>
-        );
+    if (isPending) return <Skeleton />;
 
     if (error) {
         return (
@@ -40,7 +27,6 @@ function Main(props: Props) {
     if (data) {
         return (
             <main className="grid grid-cols-1 gap-[2vh] py-[2vh] px-[4vw]">
-                <Today data={data} />
                 <TodayDetails data={data} />
                 <Forecast data={data} />
             </main>
