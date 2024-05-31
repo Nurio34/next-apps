@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 function ThemeButton() {
     const [isThemeLight, setIsThemeLight] = useState<boolean>(true);
-    const theme = isThemeLight ? "bumblebee" : "dark";
-    const html = document.querySelector("html");
-    html?.setAttribute("data-theme", theme);
+    // const theme = isThemeLight ? "bumblebee" : "dark";
+    // const html = document.querySelector("html");
+    // html?.setAttribute("data-theme", theme);
 
     return (
         <label className="swap swap-rotate">

@@ -10,7 +10,7 @@ function Footer() {
                     <Link href={"/weather"}>WeatherApp</Link>
                 </li>
                 <li>
-                    <Link href={"/next"}>NextApp</Link>
+                    <Link href={"/pdf"}>PDF</Link>
                 </li>
             </ul>
         </footer>
