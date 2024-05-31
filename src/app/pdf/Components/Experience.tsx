@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-import img from "../../../../public/image.jpg";
+import img from "../../../../public/image.png";
 
 function Experience() {
     const [image, setImage] = useState<any>(img);
